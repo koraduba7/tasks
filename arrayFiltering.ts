@@ -1,4 +1,4 @@
-function arrayFiltering(arr: number[]): number[] {
+export function arrayFiltering(arr: number[]): number[] {
   let newArr: number[] = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 1) {
@@ -7,5 +7,3 @@ function arrayFiltering(arr: number[]): number[] {
   }
   return newArr;
 }
-
-console.log(arrayFiltering([1, 2, 3, 4, 5, 6, 7, 10, 12, 200]));

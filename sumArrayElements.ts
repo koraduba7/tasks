@@ -1,10 +1,10 @@
-function sumArrayElements(arr: number[]): number {
+export function sumArrayElements(arr: number[]): number | string {
+  if (arr.length === 0) {
+    return "error";
+  }
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum;
 }
-
-console.log(sumArrayElements([1, 2 - 100, 5, 7, 8, 124]));
-console.log(sumArrayElements([1, 2, 3, 4]));

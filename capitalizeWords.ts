@@ -1,4 +1,7 @@
-function capitalizeWords(str: string): string {
+export function capitalizeWords(str: string): string {
+  if (!str) {
+    return "";
+  }
   let tempStr = str.split(" ");
   let tempArr: string[] = [];
   let result: string = "";
@@ -12,7 +15,3 @@ function capitalizeWords(str: string): string {
   }
   return result;
 }
-
-console.log(
-  capitalizeWords("Hello my friend. Today we gonna do some programming")
-);

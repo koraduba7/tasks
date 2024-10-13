@@ -1,4 +1,4 @@
-function findLargestNumber(arr: number[]): number {
+export function findLargestNumber(arr: number[]): number {
   if (arr.length === 1) {
     return arr[0];
   } else if (arr.length === 0) {
@@ -12,5 +12,3 @@ function findLargestNumber(arr: number[]): number {
   }
   return max;
 }
-
-console.log(findLargestNumber([1, 2, 7, -1, -124, -20, 42, 6, 0, 100]));

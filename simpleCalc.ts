@@ -1,4 +1,8 @@
-function simpleCalc(a: number, b: number, operation: string): number | null {
+export function simpleCalc(
+  a: number,
+  b: number,
+  operation: string
+): number | null | string {
   switch (operation) {
     case "+":
       return a + b;
@@ -10,6 +14,9 @@ function simpleCalc(a: number, b: number, operation: string): number | null {
       return a * b;
       break;
     case "/":
+      if (b === 0) {
+        return "error";
+      }
       return a / b;
       break;
 
@@ -18,9 +25,3 @@ function simpleCalc(a: number, b: number, operation: string): number | null {
       break;
   }
 }
-
-console.log(simpleCalc(1, 2, "+"));
-console.log(simpleCalc(5, 2, "-"));
-console.log(simpleCalc(3, 2, "*"));
-console.log(simpleCalc(8, 2, "/"));
-console.log(simpleCalc(7, 2, "/"));
